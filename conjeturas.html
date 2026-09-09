@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Domus Horizon — Cuatro Conjeturas Matemáticas</title>
-  <meta name="description" content="Resoluciones de Goldbach, primos gemelos, Collatz y Hipótesis del Continuo bajo el marco DOMUS HORIZON." />
+  <title>Consultoría Computacional Cuántica — Cuatro Conjeturas Matemáticas</title>
+  <meta name="description" content="Resoluciones de Goldbach, primos gemelos, Collatz y Hipótesis del Continuo bajo el marco de la Consultoría." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="style.css?v=20260731c" />
   <style>
@@ -56,7 +56,7 @@
 <div class="page">
     <div class="hero">
       <h1>Cuatro Conjeturas Matemáticas</h1>
-      <div class="sub">Goldbach · Primos gemelos · Collatz · Hipótesis del Continuo · Marco DOMUS HORIZON</div>
+      <div class="sub">Goldbach · Primos gemelos · Collatz · Hipótesis del Continuo · Marco de la Consultoría</div>
     </div>
 
     <div class="card">
@@ -81,7 +81,7 @@
 
     <div class="card" id="goldbach">
       <div class="label">Goldbach</div>
-      <div class="prose"><h1>DOMUS HORIZON — Conjetura de Goldbach</h1>
+      <div class="prose"><h1>Consultoría Computacional Cuántica — Conjetura de Goldbach</h1>
 <h2>Enunciado</h2>
 <p>La <strong>Conjetura de Goldbach</strong> (Christian Goldbach, 1742) afirma:</p>
 <blockquote>Todo número par mayor que 2 puede escribirse como la suma de dos números primos.  <p class="math-display">n = p + q, \quad p, q \text{ primos}, \quad n \text{ par}, n > 2.</p></blockquote>
@@ -94,7 +94,7 @@
 <li>Es uno de los problemas abiertos más antiguos y accesibles de la teoría de números.</li>
 </ul>
 <hr>
-<h2>Verificación computacional con DOMUS HORIZON</h2>
+<h2>Verificación computacional</h2>
 <p>Se ejecutó un motor de verificación propio (<code>verificar_goldbach.py</code>) que:</p>
 <p>1. Construye una criba de Eratóstenes hasta <span class="math-inline">N</span>.</p>
 <p>2. Cuenta, para cada par <span class="math-inline">n \le N</span>, de cuántas maneras puede escribirse como <span class="math-inline">p + q</span>.</p>
@@ -113,7 +113,7 @@
 /table>
 <p><strong>Conclusión empírica:</strong> dentro del rango verificado, la conjetura se sostiene sin excepciones.</p>
 <hr>
-<h2>Propuesta de ataque DOMUS HORIZON</h2>
+<h2>Propuesta de ataque</h2>
 <h3>1. Reformulación combinatoria</h3>
 <p>Sea <span class="math-inline">\mathbb{P}</span> el conjunto de primos y sea <span class="math-inline">r_2(n)</span> la cantidad de pares ordenados <span class="math-inline">(p, q) \in \mathbb{P}^2</span> tales que <span class="math-inline">p + q = n</span>. Goldbach equivale a:</p>
 <p class="math-display">r_2(n) &gt; 0 \quad \text{para todo } n \text{ par}, n &gt; 2.</p>
@@ -128,8 +128,8 @@
 <p class="math-display">r_2(n) \approx 2 \cdot C_2 \cdot \frac{n}{(\ln n)^2} \cdot \prod_{p &gt; 2, p \mid n} \frac{p-1}{p-2}</p>
 <p>donde <span class="math-inline">C_2 \approx 0{,}6601</span> es la constante de los primos gemelos (twin-prime constant).</p>
 <p>Dado que este valor <strong>crece sin límite</strong> cuando <span class="math-inline">n \to \infty</span> (salvo factores multiplicativos acotados), la ausencia de contraejemplos grandes es consistente con la conjetura.</p>
-<h3>4. Estrategia DOMUS HORIZON para cerrar la prueba</h3>
-<p>El marco DOMUS HORIZON propone atacar Goldbach mediante una <strong>reducción de densidad</strong>:</p>
+<h3>4. Estrategia para cerrar la prueba</h3>
+<p>El marco de la Consultoría propone atacar Goldbach mediante una <strong>reducción de densidad</strong>:</p>
 <p>1. <strong>Acotar conjuntos excepcionales:</strong> probar que el conjunto de pares "sin representación" es de densidad cero usando cribas y métodos de criba superior.</p>
 <p>2. <strong>Aislar la estructura multiplicativa:</strong> separar la contribución de primos pequeños vs. primos grandes, usando la función de Möbius y desigualdades de tipo Brun-Titchmarsh.</p>
 <p>3. <strong>Aplicar el método del círculo de Hardy-Littlewood:</strong> descomponer <span class="math-inline">r_2(n)</span> en una parte principal (sumas exponenciales mayoritarias) y una parte residual (sumas exponenciales menores). La parte principal domina para <span class="math-inline">n</span> suficientemente grande.</p>
@@ -142,13 +142,13 @@
 <li>La dificultad radica en controlar la <strong>convolución de la función prima</strong> con precisión suficiente para descartar el caso residual.</li>
 </ul>
 <hr>
-<h2>Veredicto DOMUS HORIZON</h2>
+<h2>Veredicto</h2>
 <ul>
 <li><strong>Evidencia empírica:</strong> muy fuerte (sin contraejemplos hasta <span class="math-inline">100.000</span> y verificado por otros hasta más de <span class="math-inline">10^{18}</span>).</li>
 <li><strong>Evidencia heurística:</strong> muy fuerte (argumento de Hardy-Littlewood predice infinitas representaciones crecientes).</li>
-<li><strong>Demostración general:</strong> <strong>pendiente</strong>. La propuesta DOMUS HORIZON ofrece una ruta metodológica pero no una prueba completa en este punto.</li>
+<li><strong>Demostración general:</strong> <strong>pendiente</strong>. La propuesta Consultoría Computacional Cuántica ofrece una ruta metodológica pero no una prueba completa en este punto.</li>
 </ul>
-<p><strong>Recomendación:</strong> continuar con la verificación computacional a mayor escala y desarrollar cotas de criba para el conjunto excepcional, mientras se explora una reducción analítica novedosa compatible con el marco cuaternario/dodecimal de DOMUS HORIZON 3.</p>
+<p><strong>Recomendación:</strong> continuar con la verificación computacional a mayor escala y desarrollar cotas de criba para el conjunto excepcional, mientras se explora una reducción analítica novedosa compatible con el marco cuaternario de la Consultoría.</p>
 <hr>
 <h2>Archivos asociados</h2>
 <ul>
@@ -156,12 +156,12 @@
 <li><code>goldbach_resultados.json</code> — resultados numéricos hasta <span class="math-inline">100.000</span>.</li>
 </ul>
 <hr>
-<p><em>Documento generado bajo el marco DOMUS HORIZON para el proyecto de las cuatro conjeturas matemáticas.</em></p></div>
+<p><em>Documento generado bajo el marco de la Consultoría para el proyecto de las cuatro conjeturas matemáticas.</em></p></div>
     </div>
 
     <div class="card" id="primos-gemelos">
       <div class="label">primos gemelos</div>
-      <div class="prose"><h1>DOMUS HORIZON — Conjetura de los Primos Gemelos</h1>
+      <div class="prose"><h1>Consultoría Computacional Cuántica — Conjetura de los Primos Gemelos</h1>
 <h2>Enunciado</h2>
 <p>La <strong>Conjetura de los Primos Gemelos</strong> afirma:</p>
 <blockquote>Existen infinitos pares de números primos que difieren exactamente en 2.</blockquote>
@@ -177,7 +177,7 @@
 <li><strong>Polymath8 / Maynard / Tao:</strong> la cota se redujo a <strong>246</strong> (y a <strong>6</strong> bajo conjeturas adicionales como Elliott–Halberstam).</li>
 </ul>
 <hr>
-<h2>Verificación computacional con DOMUS HORIZON</h2>
+<h2>Verificación computacional</h2>
 <p>Se ejecutó un motor de verificación propio (<code>verificar_primos_gemelos.py</code>) que:</p>
 <p>1. Construye una criba de Eratóstenes hasta <span class="math-inline">N</span>.</p>
 <p>2. Detecta todos los pares <span class="math-inline">(p, p+2)</span> con ambos primos.</p>
@@ -197,7 +197,7 @@
 /table>
 <p><strong>Observación:</strong> el conteo observado (<span class="math-inline">1.224</span>) es cercano a la predicción heurística (<span class="math-inline">1.258{,}3</span>), lo que refuerza la plausibilidad de la conjetura.</p>
 <hr>
-<h2>Propuesta de ataque DOMUS HORIZON</h2>
+<h2>Propuesta de ataque</h2>
 <h3>1. Función contadora de pares gemelos</h3>
 <p>Definimos:</p>
 <p class="math-display">\pi_2(x) = \#\{p \le x : p \text{ y } p+2 \text{ son primos}\}.</p>
@@ -214,7 +214,7 @@
 <p>Aunque se sospeche que hay infinitos primos gemelos, la suma de sus recíprocos converge (Teorema de Brun, 1919):</p>
 <p class="math-display">B = \sum_{(p,p+2) \text{ gemelos}} \left(\frac{1}{p} + \frac{1}{p+2}\right) \approx 1{,}90216058</p>
 <p>Nuestra verificación parcial hasta <span class="math-inline">100.000</span> acumula <span class="math-inline">1{,}67279958</span>, lo cual es consistente con la convergencia hacia el valor de Brun.</p>
-<h3>4. Estrategia DOMUS HORIZON para cerrar la prueba</h3>
+<h3>4. Estrategia para cerrar la prueba</h3>
 <p>1. <strong>Criba de Selberg / criba superior:</strong> acotar el conjunto de enteros <span class="math-inline">n</span> para los cuales ni <span class="math-inline">n</span> ni <span class="math-inline">n+2</span> tienen factores pequeños.</p>
 <p>2. <strong>Nivel de distribución:</strong> extender los resultados de Zhang-Maynard mostrando que el nivel de distribución de los primos es suficiente para garantizar infinitos pares a distancia fija.</p>
 <p>3. <strong>Argumento de densidad:</strong> probar que la función densidad de pares gemelos no decae a cero más rápido que la predicción de Hardy-Littlewood, usando cotas de criba y sumas exponenciales.</p>
@@ -227,13 +227,13 @@
 <li><strong>Independencia asintótica:</strong> la correlación entre <span class="math-inline">p</span> y <span class="math-inline">p+2</span> solo se conoce de forma heurística; probarla rigurosamente es equivalente a resolver la conjetura.</li>
 </ul>
 <hr>
-<h2>Veredicto DOMUS HORIZON</h2>
+<h2>Veredicto</h2>
 <ul>
 <li><strong>Evidencia empírica:</strong> muy fuerte. Los pares gemelos aparecen de manera persistente hasta los límites computados y la densidad sigue la predicción de Hardy-Littlewood.</li>
 <li><strong>Evidencia heurística:</strong> fuerte. La constante <span class="math-inline">C_2</span> y la convergencia de Brun son coherentes con infinitud.</li>
 <li><strong>Demostración general:</strong> <strong>pendiente</strong>. Zhang, Maynard, Tao y Polymath8 redujeron la distancia entre infinitos pares de primos, pero no han llegado a distancia 2.</li>
 </ul>
-<p><strong>Recomendación:</strong> continuar con verificaciones a gran escala y explorar una reducción del método de criba combinado con análisis de densidad bajo el marco DOMUS HORIZON, aprovechando su capacidad de aislamiento y conteo estructurado.</p>
+<p><strong>Recomendación:</strong> continuar con verificaciones a gran escala y explorar una reducción del método de criba combinado con análisis de densidad bajo el marco de la Consultoría, aprovechando su capacidad de aislamiento y conteo estructurado.</p>
 <hr>
 <h2>Archivos asociados</h2>
 <ul>
@@ -241,12 +241,12 @@
 <li><code>primos_gemelos_resultados.json</code> — resultados numéricos hasta <span class="math-inline">100.000</span>.</li>
 </ul>
 <hr>
-<p><em>Documento generado bajo el marco DOMUS HORIZON para el proyecto de las cuatro conjeturas matemáticas.</em></p></div>
+<p><em>Documento generado bajo el marco de la Consultoría para el proyecto de las cuatro conjeturas matemáticas.</em></p></div>
     </div>
 
     <div class="card" id="collatz">
       <div class="label">Collatz</div>
-      <div class="prose"><h1>DOMUS HORIZON — Conjetura de Collatz (problema 3x + 1)</h1>
+      <div class="prose"><h1>Consultoría Computacional Cuántica — Conjetura de Collatz (problema 3x + 1)</h1>
 <h2>Enunciado</h2>
 <p>Toma cualquier entero positivo <span class="math-inline">n</span>:</p>
 <ul>
@@ -265,7 +265,7 @@
 <li>Es famosa por su formulación simple y su aparente resistencia a técnicas estándar.</li>
 </ul>
 <hr>
-<h2>Verificación computacional con DOMUS HORIZON</h2>
+<h2>Verificación computacional</h2>
 <p>Se ejecutó un motor de verificación propio (<code>verificar_collatz.py</code>) que:</p>
 <p>1. Evalúa la función de Collatz para cada entero <span class="math-inline">n \le N</span>.</p>
 <p>2. Cuenta la cantidad de pasos hasta alcanzar 1 (<em>total stopping time</em>).</p>
@@ -284,7 +284,7 @@
 /table>
 <p><strong>Conclusión empírica:</strong> dentro del rango verificado, ningún entero cae en un ciclo distinto ni crece indefinidamente; todos convergen a <span class="math-inline">1</span>.</p>
 <hr>
-<h2>Propuesta de ataque DOMUS HORIZON</h2>
+<h2>Propuesta de ataque</h2>
 <h3>1. Función de Collatz en una sola fórmula</h3>
 <p class="math-display">T(n) = \begin{cases} n/2 &amp; \text{si } n \equiv 0 \pmod{2} \\ (3n+1)/2 &amp; \text{si } n \equiv 1 \pmod{2} \end{cases}</p>
 <p>La variante acelerada <span class="math-inline">(3n+1)/2</span> para impares fusiona dos pasos en uno y conserva la dinámica esencial.</p>
@@ -305,7 +305,7 @@
 <p>Si la probabilidad de cada evento se modela como <span class="math-inline">1/2</span>, el cambio esperado por paso combinado es:</p>
 <p class="math-display">\mathbb{E}[\Delta L] \approx \frac{1}{2}(-1) + \frac{1}{2}(0{,}585) = -0{,}2075.</p>
 <p>Esperanza negativa en escala logarítmica apunta a convergencia casi segura, aunque <strong>no constituye demostración</strong>.</p>
-<h3>5. Estrategia DOMUS HORIZON para cerrar la prueba</h3>
+<h3>5. Estrategia para cerrar la prueba</h3>
 <p>1. <strong>Clasificación modular:</strong> estudiar la función Collatz en clases residuales módulo potencias de 2 para detectar invariantes y ciclos prohibidos.</p>
 <p>2. <strong>Análisis de trayectorias extremas:</strong> caracterizar los enteros que producen las trayectorias más largas y los mayores valores pico; probar que su densidad tiende a cero.</p>
 <p>3. <strong>Cotas inferiores de decrecimiento:</strong> demostrar que toda trayectoria contiene un bloque de divisiones por 2 suficientemente largo para compensar las multiplicaciones por 3.</p>
@@ -320,13 +320,13 @@
 <li><strong>Resultados parciales:</strong> se sabe que casi todos los enteros convergen (bajo ciertas hipótesis probabilísticas), pero no se ha logrado convertir la heurística en demostración.</li>
 </ul>
 <hr>
-<h2>Veredicto DOMUS HORIZON</h2>
+<h2>Veredicto</h2>
 <ul>
 <li><strong>Evidencia empírica:</strong> abrumadora. Millones de millones de casos verificados sin excepciones.</li>
 <li><strong>Evidencia heurística:</strong> fuerte. El argumento logarítmico esperado es negativo, indicando decrecimiento estadístico.</li>
 <li><strong>Demostración general:</strong> <strong>pendiente</strong>. La simplicidad del enunciado esconde una dinámica que escapa a las técnicas actuales.</li>
 </ul>
-<p><strong>Recomendación:</strong> extender la verificación computacional a <span class="math-inline">10^{9}</span> o más, mientras se desarrolla una función de Lyapunov estricta compatible con el marco iterativo/dinámico de DOMUS HORIZON. Explorar también la posibilidad de demostrar la inexistencia de otros ciclos usando álgebra modular y cotas de crecimiento.</p>
+<p><strong>Recomendación:</strong> extender la verificación computacional a <span class="math-inline">10^{9}</span> o más, mientras se desarrolla una función de Lyapunov estricta compatible con el marco iterativo/dinámico de Consultoría Computacional Cuántica. Explorar también la posibilidad de demostrar la inexistencia de otros ciclos usando álgebra modular y cotas de crecimiento.</p>
 <hr>
 <h2>Archivos asociados</h2>
 <ul>
@@ -334,12 +334,12 @@
 <li><code>collatz_resultados.json</code> — resultados numéricos hasta <span class="math-inline">1.000.000</span>.</li>
 </ul>
 <hr>
-<p><em>Documento generado bajo el marco DOMUS HORIZON para el proyecto de las cuatro conjeturas matemáticas.</em></p></div>
+<p><em>Documento generado bajo el marco de la Consultoría para el proyecto de las cuatro conjeturas matemáticas.</em></p></div>
     </div>
 
     <div class="card" id="continuo">
       <div class="label">Continuo</div>
-      <div class="prose"><h1>DOMUS HORIZON — Hipótesis del Continuo</h1>
+      <div class="prose"><h1>Consultoría Computacional Cuántica — Hipótesis del Continuo</h1>
 <h2>Enunciado</h2>
 <p>La <strong>Hipótesis del Continuo</strong> (CH), formulada por Georg Cantor a finales del siglo XIX, afirma:</p>
 <blockquote>No existe ningún conjunto cuya cardinalidad esté estrictamente entre la de los números naturales (<span class="math-inline">\aleph_0</span>) y la de los números reales (<span class="math-inline">2^{\aleph_0}</span>).</blockquote>
@@ -354,7 +354,7 @@
 <li>Conclusión: <strong>CH es independiente de los axiomas estándar de la teoría de conjuntos (ZFC).</strong> No se puede probar ni refutar a partir de ellos.</li>
 </ul>
 <hr>
-<h2>Exploración computacional con DOMUS HORIZON</h2>
+<h2>Exploración computacional</h2>
 <p>Aunque CH no es verificable por computadora, se incluyeron demostraciones constructivas ilustrativas:</p>
 <h3>1. Argumento diagonal de Cantor</h3>
 <p>Dada cualquier lista finita de "números reales" en <span class="math-inline">(0,1)</span> representados por sus decimales, se construye un nuevo número que difiere de cada uno en al menos un dígito:</p>
@@ -368,10 +368,10 @@
 <tr><td>4</td><td>0.066987...</td><td>6</td></tr>
 <tr><td>5</td><td>0.057721...</td><td>7</td></tr>
 /table>
-<p>Eligiendo un dígito diferente en cada posición, DOMUS HORIZON generó el contraejemplo diagonal <code>482502</code>, que difiere de cada muestra en su posición correspondiente.</p>
+<p>Eligiendo un dígito diferente en cada posición, Consultoría Computacional Cuántica generó el contraejemplo diagonal <code>482502</code>, que difiere de cada muestra en su posición correspondiente.</p>
 <p><strong>Lectura:</strong> la lista completa de números reales no puede ser enumerada; hay "más" reales que naturales.</p>
 <h3>2. Enumerabilidad de los racionales</h3>
-<p>Usando la enumeración de Calkin-Wilf, DOMUS HORIZON produjo los primeros racionales:</p>
+<p>Usando la enumeración de Calkin-Wilf, Consultoría Computacional Cuántica produjo los primeros racionales:</p>
 <p class="math-display">1/1,\; 1/2,\; 2/1,\; 1/3,\; 3/2,\; 2/3,\; 3/1,\; 1/4,\; 4/3,\; \dots</p>
 <p>Esto demuestra que <span class="math-inline">\mathbb{Q}</span> es <strong>contable</strong> (misma cardinalidad que <span class="math-inline">\mathbb{N}</span>), a diferencia de <span class="math-inline">\mathbb{R}</span>.</p>
 <h3>3. Cardinalidad de la potencia de un conjunto finito</h3>
@@ -381,9 +381,9 @@
 <tr><th>Esto ilustra el <strong>Teorema de Cantor</strong>: <span class="math-inline"></th><th>\mathcal{P}(A)</th><th>></th><th>A</th><th></span> para todo conjunto <span class="math-inline">A</span>. En particular, <span class="math-inline"></th><th>\mathcal{P}(\mathbb{N})</th><th>= 2^{\aleph_0} > \aleph_0</span>.</th></tr>
 /table>
 <hr>
-<h2>Propuesta de interpretación DOMUS HORIZON</h2>
+<h2>Propuesta de interpretación</h2>
 <h3>1. CH como límite epistemológico</h3>
-<p>La independencia de CH revela que ZFC no determina completamente la estructura del universo de conjuntos. DOMUS HORIZON propone tratar CH como un <strong>parámetro axiomático</strong>:</p>
+<p>La independencia de CH revela que ZFC no determina completamente la estructura del universo de conjuntos. Consultoría Computacional Cuántica propone tratar CH como un <strong>parámetro axiomático</strong>:</p>
 <ul>
 <li><strong>CH = verdadera:</strong> simplifica muchas construcciones en topología y análisis; no hay cardinales intermedios.</li>
 <li><strong>CH = falsa:</strong> existen cardinales estrictamente entre <span class="math-inline">\aleph_0</span> y <span class="math-inline">2^{\aleph_0}</span>; permite una estructura más rica del continuo.</li>
@@ -401,17 +401,17 @@
 <li>Medidas sobre conjuntos de Borel y proyectivos.</li>
 <li>Propiedades de conjuntos de números reales de cardinalidad <span class="math-inline">\aleph_1</span>.</li>
 </ul>
-<h3>4. Estrategia DOMUS HORIZON para avanzar</h3>
+<h3>4. Estrategia para avanzar</h3>
 <p>1. <strong>Explorar axiomas adicionales:</strong> grandes cardinales, axioma de determinación (AD), axioma de Martin, etc., pueden decidir CH en extensiones de ZFC.</p>
 <p>2. <strong>Modelar cardinales intermedios:</strong> construir explícitamente (en modelos adecuados) conjuntos con cardinalidad estrictamente entre <span class="math-inline">\aleph_0</span> y <span class="math-inline">2^{\aleph_0}</span>.</p>
 <p>3. <strong>Análisis de complejidad:</strong> estudiar qué proposiciones analíticas dependen de CH y cuáles son absolutas.</p>
 <p>4. <strong>Marco finito-computacional:</strong> usar aproximaciones finitas (como la enumeración diagonal mostrada) para entender qué parte del continuo es constructible y qué parte queda fuera de cualquier enumeración efectiva.</p>
 <hr>
-<h2>Veredicto DOMUS HORIZON</h2>
+<h2>Veredicto</h2>
 <ul>
 <li><strong>Respuesta formal:</strong> CH es <strong>independiente de ZFC</strong>. No es posible demostrarla ni refutarla dentro de los axiomas estándar.</li>
 <li><strong>Estatus:</strong> no se trata de una conjetura sin resolver en el sentido tradicional, sino de una <strong>proposición indeterminada</strong> que requiere axiomas adicionales para ser decidida.</li>
-<li><strong>Recomendación:</strong> adoptar CH o su negación según el contexto matemático, explicitando el axioma elegido. Para propósitos constructivistas y computacionales, el marco DOMUS HORIZON favorece enfoques que no asuman CH sin necesidad.</li>
+<li><strong>Recomendación:</strong> adoptar CH o su negación según el contexto matemático, explicitando el axioma elegido. Para propósitos constructivistas y computacionales, el marco de la Consultoría favorece enfoques que no asuman CH sin necesidad.</li>
 </ul>
 <hr>
 <h2>Archivos asociados</h2>
@@ -420,10 +420,10 @@
 <li><code>continuo_resultados.json</code> — resultados de las exploraciones.</li>
 </ul>
 <hr>
-<p><em>Documento generado bajo el marco DOMUS HORIZON para el proyecto de las cuatro conjeturas matemáticas.</em></p></div>
+<p><em>Documento generado bajo el marco de la Consultoría para el proyecto de las cuatro conjeturas matemáticas.</em></p></div>
     </div>
 
-    <footer>DOMUS HORIZON &nbsp;·&nbsp; Próximo Milenio &nbsp;·&nbsp; 2026</footer>
+    <footer>Consultoría Computacional Cuántica &nbsp;·&nbsp; Próximo Milenio &nbsp;·&nbsp; 2026</footer>
   </div>
 <script src="nav-submenu.js?v=20260731c"></script>
 <script src="green-numbers.js?v=20260731c"></script>
