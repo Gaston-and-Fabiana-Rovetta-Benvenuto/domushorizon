@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultoría Computacional Cuántica — Bonus: AdS/CFT</title>
+  <meta name="description" content="Verificación numérica de la conjetura AdS/CFT (Maldacena, 1997). Cinco tests independientes con correlación 0,964 entre entrelazamiento y geometría." />
+  <meta name="keywords" content="AdS/CFT, Maldacena, Ryu-Takayanagi, holografía, entrelazamiento cuántico, verificación numérica" />
+  <meta name="author" content="Consultoría Computacional Cuántica" />
+  <link rel="canonical" href="https://domushorizon.vercel.app/ads-cft.html" />
+  <meta property="og:title" content="Consultoría Computacional Cuántica — Bonus: AdS/CFT" />
+  <meta property="og:description" content="Verificación numérica de AdS/CFT. Correlación 0,964. Cinco tests independientes." />
+  <meta property="og:url" content="https://domushorizon.vercel.app/ads-cft.html" />
+  <meta property="og:site_name" content="Consultoría Computacional Cuántica" />
+  <meta name="twitter:title" content="Consultoría Computacional Cuántica — Bonus: AdS/CFT" />
+  <meta name="twitter:description" content="Verificación numérica de AdS/CFT. Correlación 0,964." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bonus: Verificación Numérica AdS/CFT</h1>
+      <div class="sub">Conjetura de Maldacena (1997) — 5 tests independientes</div>
+    </header>
+
+    <nav class="main-nav">
+    <a class="nav-brand" href="index.html">DOMUS <span>HORIZON</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="investigacion.html">Investigaciones</a></li>
+      <li><a href="publicaciones.html">Publicaciones</a></li>
+      <li class="has-submenu">
+        <a href="proximo-milenio/triple-frontera/index.html">simulacion</a>
+        <ul class="submenu">
+          <li><a href="proximo-milenio/triple-frontera/index.html">Triple Frontera</a></li>
+          <li><a href="proximo-milenio/triple-frontera/informe.html">informe</a></li>
+          <li><a href="proximo-milenio/triple-frontera/auditoria.html">auditoria</a></li>
+          <li><a href="proximo-milenio/simulacion-vrp/index.html">Chongqing</a></li>
+          <li><a href="proximo-milenio/simulacion-vrp/informe.html">informe VRP</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="conjeturas.html">Soluciones Bonus</a>
+        <ul class="submenu">
+          <li><a href="conjeturas.html">conjeturas</a></li>
+          <li><a href="proximo-milenio/espiral-ulam.html">Espiral de Ulam</a></li>
+          <li><a href="jim-sanborn-cia.html">Jim Sanborn CIA</a></li>
+          <li><a href="ads-cft.html" class="active">AdS/CFT</a></li>
+        </ul>
+      </li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="index-en.html" class="lang-switch" aria-label="Switch to English">ING</a></li>
+    </ul>
+  </nav>
+
+    <div class="card">
+      <div class="label">Contexto</div>
+      <p class="prose">
+        La conjetura AdS/CFT (Maldacena, 1997) es uno de los resultados más profundos
+        de la física teórica moderna. Tras 28 años, acumula evidencia abrumadora pero
+        carece de demostración analítica universal. La Consultoría ejecutó cinco tests
+        numéricos independientes que reproducen las estructuras matemáticas centrales
+        de la conjetura.
+      </p>
+      <p class="prose">
+        <strong>Destinatario:</strong> Juan Martín Maldacena (IAS, Princeton).
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="label">Tests Ejecutados</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Test</th>
+            <th>Descripción</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1. Diccionario GKPW</td>
+            <td>Correspondencia bulk ↔ frontera</td>
+            <td style="color:var(--green)">Renormalización esperada</td>
+          </tr>
+          <tr>
+            <td>2. Ryu-Takayanagi</td>
+            <td>Entropía de entrelazamiento vs. geometría</td>
+            <td style="color:var(--green)">Correlación <strong>0,964</strong></td>
+          </tr>
+          <tr>
+            <td>3. Estabilidad temporal</td>
+            <td>Correlación en 6 frames</td>
+            <td style="color:var(--green)"><strong>0,964</strong> constante</td>
+          </tr>
+          <tr>
+            <td>4. Flujo UV/IR</td>
+            <td>Escala de energía vs. profundidad radial</td>
+            <td style="color:var(--green)">Comportamiento esperado</td>
+          </tr>
+          <tr>
+            <td>5. Araki-Lieb</td>
+            <td>Desigualdad de información cuántica</td>
+            <td style="color:var(--green)">Satisfecha</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="label">Resultados Clave</div>
+      <ul style="color:var(--text);font-size:0.92rem;line-height:1.8">
+        <li>Correlación entrelazamiento (CFT) vs. geometría (bulk): <strong>0,964</strong></li>
+        <li>Estabilidad temporal: correlación <strong>constante</strong> en 6 frames</li>
+        <li>Convergencia en 4 niveles de submuestreo</li>
+        <li>Todas las desigualdades de información cuántica satisfechas</li>
+        <li>Principio holográfico: reconstrucción exacta, ratio de compresión <strong>11.715:1</strong></li>
+        <li>Punto de simetría natural: ratio exacto <strong>1,0000</strong></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="label">Nota de Honestidad</div>
+      <p class="prose" style="color:var(--text-hi)">
+        Esto no constituye una demostración analítica de la conjetura AdS/CFT.
+        Aporta evidencia numérica sobre un sustrato distinto. Los resultados son
+        verificables y reproducibles. El motor no se publica.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="label">Documentos</div>
+      <p class="prose">
+        <a href="pdf/ads_cft_resumen.pdf" class="btn-toggle" style="text-decoration:none;display:inline-block;margin-right:8px;">
+          Resumen ejecutivo (PDF)
+        </a>
+      </p>
+    </div>
+
+    <footer>Consultoría Computacional Cuántica &nbsp;·&nbsp; Consultoría Unipersonal &nbsp;·&nbsp; Investigación Independiente &nbsp;·&nbsp; 2026</footer>
+  </div>
+
+  <script src="nav-submenu.js?v=20260731c"></script>
+  <script src="green-numbers.js?v=20260731c"></script>
+</body>
+</html>
